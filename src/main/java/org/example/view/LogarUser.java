@@ -21,7 +21,7 @@ public class LogarUser {
     Getter getter=new Getter();
     public void fazerLogin() {
         String name = inputUserModel.readStringFromUser("Digite seu nome:");
-        int password = inputUserModel.readIntFromUser("Digite seu cpf sem os carcteres:");
+        int password = inputUserModel.readIntFromUser("Digite seu cpf (sem os caracteres especiais):");
 
         if (validDataBase.isValidUserCredentials(name, password)) {
             System.out.println("========== Bem-Vindo(a) " + name + " ==========");

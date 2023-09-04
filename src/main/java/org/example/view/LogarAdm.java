@@ -94,10 +94,8 @@ public class LogarAdm {
 
     public void fazerLogin() {
         try {
-            System.out.println("Digite seu nome:");
-            String nome = scanner.next();
-            System.out.println("Digite seu cpf:");
-            int senha = scanner.nextInt();
+            String nome = inputUser.readStringFromUser("Digite seu nome:");
+            int senha =inputUser.readIntFromUser("Digite seu cpf (sem os caracteres especiais):");
             usuarioModel.setName(nome);
             usuarioModel.setCpf(senha);
 
@@ -169,7 +167,6 @@ public class LogarAdm {
         int id = inputUser.readIntFromUser("Qual o ID do usuario que deseja deletar: ");
         usuarioService.deletarUsuario(id);
     }
-
     private void update() {
         int cpf = inputUser.readIntFromUser("Qual seu cpf: ");
         String email = inputUser.readStringFromUser("Qual o novo email: ");

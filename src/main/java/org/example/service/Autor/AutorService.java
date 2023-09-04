@@ -50,18 +50,4 @@ public class AutorService {
             e.printStackTrace();
         }
     }
-
-    public void updateAutor(int id, String name) {
-        String sql = "UPDATE autor SET name='" + name + "' WHERE id=" + id;
-        try {
-            int rowCount = statement.executeUpdate(sql);
-            if (rowCount > 0) {
-                System.out.println("Autor com ID " + id + " atualizado com sucesso.");
-            } else {
-                System.out.println("Autor com ID " + id + " não encontrado.");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 }
