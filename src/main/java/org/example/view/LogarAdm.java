@@ -130,7 +130,6 @@ public class LogarAdm {
             System.out.println("Erro: " + e.getMessage());
         }
     }
-
     private void addLivro() {
         autorService.listarAutores();
         int isbn = inputUser.readIntFromUser("Qual o isbn do livro: ");

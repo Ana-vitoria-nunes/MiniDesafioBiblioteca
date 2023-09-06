@@ -45,20 +45,6 @@ public class LivroService {
             e.printStackTrace();
         }
     }
-
-    public void atualizarLivro(int id, int isbn, String titulo, int id_autor) {
-        String sql = "UPDATE livro SET isbn = " + isbn + ", titulo = '" + titulo + "', id_autor = " + id_autor + " WHERE id = " + id;
-        try {
-            int rowCount = statement.executeUpdate(sql);
-            if (rowCount > 0) {
-                System.out.println("Livro com ID " + id + " atualizado com sucesso.");
-            } else {
-                System.out.println("Livro com ID " + id + " não encontrado.");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
     public void listarLivros() {
         String sql = "SELECT id, isbn, titulo, id_autor FROM livro";
         try {

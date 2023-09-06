@@ -63,7 +63,7 @@ public class UsuarioService {
                 int cpf = resultSet.getInt("cpf");
                 String name = resultSet.getString("name");
                 String email = resultSet.getString("email");
-                System.out.println("ID: "+ id +"CPF: " + cpf + " | Nome: " + name + " | Email: " + email);
+                System.out.println("ID: "+ id +" CPF: " + cpf + " | Nome: " + name + " | Email: " + email);
             }
         } catch (SQLException e) {
             e.printStackTrace();
